@@ -1,0 +1,76 @@
+# henhouse.toml: config file for henhouse
+# Please check all values before running henhouse.
+
+log_file = "/var/log/henhouse.log"
+
+# Path to directory contains task xml files
+task_dir = "/etc/henhouse/"
+
+[Database]
+connection = "user=henhouse password=PASSWORD_PLACEHOLDER dbname=henhouse sslmode=disable"
+max_connections = 90 # should be less than same value in postgresql.conf
+safe_reinit = false # disallow reinit after game start
+
+[Scoreboard]
+www_path = "/var/www/henhouse"
+template_path = "/var/lib/henhouse/templates"
+addr = ":8000"
+recalc_timeout = "1m"
+under_proxy = true
+
+[WebsocketTimeout]
+info = "1s"
+scoreboard = "10s"
+tasks = "10s"
+
+[TaskPrice]
+# use non linear function for calculate teams base
+use_non_linear = false
+# for correct work with small amount of teams
+use_teams_base = false
+teams_base = 20
+# 500 if percent of solve less than value
+p500 = 10
+p400 = 15
+p300 = 30
+# 200 if percent of solve less than value
+p200 = 50
+# other 100
+
+[Game]
+# Europe/Moscow
+start = "Nov 17 10:00 2015"
+end = "Dec 31 23:59 2015"
+
+[Flag]
+# timeout between send flags
+send_timeout = "1s"
+
+[Task]
+# timeout after send correct flag before open next task
+open_timeout = "1m"
+# auto open task after previous solved
+auto_open = true
+auto_open_timeout = "6h"
+
+[[Teams]]
+name = "FooTeam"
+description = "Foo test team"
+token = "33"
+
+[[Teams]]
+name = "BarTeam"
+description = "Bar test team"
+token = "22"
+
+[[Teams]]
+name = "Admin"
+test = true
+token = "11"
+
+[Admin]
+# Веб-админка. Включайте только с длинным случайным токеном (минимум 16 символов),
+# иначе панель не активируется. Токен сравнивается в constant-time, попытки
+# входа ограничены по IP, все действия пишутся в лог.
+enabled = false
+token = "CHANGE_ME_LONG_RANDOM_SECRET"

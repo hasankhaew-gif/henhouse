@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15171b">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <title>ЭТАЛОН CTF: Скорборд</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/scoreboard.js" defer></script>
+  <script src="/js/chart.js" defer></script>
+</head>
+<body>
+
+<header id="header">
+  <a class="brand" href="/tasks.html">
+    <img class="brand-owl" src="/images/etalon-owl.png" alt="Эталон">
+    <div class="brand-divider"></div>
+    <span class="brand-title">ЭТАЛОН CTF <em>2026</em></span>
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+  <label for="nav-toggle" class="nav-burger" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="main-nav">
+    <a class="nav-link" href="/tasks.html">Задания</a>
+    <a class="nav-link active" href="/index.html">Скорборд</a>
+    <a class="nav-link" href="/profile.html">Профиль</a>
+    <a class="nav-link" href="/support.html">Поддержка</a>
+  </nav>
+  <div id="info" class="header-info">%s</div>
+</header>
+
+<div id="content">
+  <div id="chart-section">
+    <div class="section-title">Динамика очков</div>
+    <div id="chart-container" class="chart-wrap">
+      <div id="chart-placeholder" class="chart-placeholder">Загрузка...</div>
+    </div>
+  </div>
+  <div class="table-scroll-wrap">
+    <table id="scoreboard-table">%s</table>
+  </div>
+</div>
+
+</body>
+</html>

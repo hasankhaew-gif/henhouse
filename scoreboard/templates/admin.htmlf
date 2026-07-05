@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111317">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <title>ЭТАЛОН CTF: Панель управления</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-topbar">
+  <a class="admin-topbar-brand" href="/admin.html">
+    <img class="admin-topbar-owl" src="/images/etalon-owl.png" alt="">
+    <span class="admin-topbar-title">ЭТАЛОН CTF</span>
+    <span class="admin-topbar-sub">панель управления</span>
+  </a>
+  <div class="admin-topbar-right">
+    <div class="admin-topbar-info">%s</div>
+    <form method="post" action="/admin/logout" class="admin-inline-form">
+      <input type="hidden" name="csrf" value="%s">
+      <button class="admin-link" type="submit">выйти</button>
+    </form>
+  </div>
+</header>
+
+<nav class="admin-tabs">
+%s
+</nav>
+
+<main class="admin-content">
+%s
+</main>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+package scoreboard
+
+import (
+	"fmt"
+
+	"github.com/jollheef/henhouse/game"
+)
+
+func taskSolvedBy(task game.TaskInfo, teamID int) bool {
+	for _, t := range task.SolvedBy {
+		if t == teamID {
+			return true
+		}
+	}
+	return false
+}
+
+func taskToHTML(teamID int, task game.TaskInfo, ru bool) (html string) {
+
+	buttonClass := "closed"
+
+	if taskSolvedBy(task, teamID) {
+		buttonClass = "success"
+	} else if len(task.SolvedBy) > 0 {
+		buttonClass = "solved"
+	} else if task.Opened {
+		buttonClass = "opened"
+	}
+
+	if task.Opened {
+		html = fmt.Sprintf(`<a href="/task?id=%d" class="task_block task_block-%s">`,
+			task.ID, buttonClass)
+	} else {
+		html = fmt.Sprintf(`<a class="task_block task_block-%s">`, buttonClass)
+	}
+
+	var name string
+	if ru {
+		name = task.Name
+	} else {
+		name = task.NameEn
+	}
+
+	solves := len(task.SolvedBy)
+	var solvesRu string
+	if solves == 1 {
+		solvesRu = "1 решил"
+	} else {
+		solvesRu = fmt.Sprintf("%d решили", solves)
+	}
+
+	html += fmt.Sprintf(
+		`<div class="task_block-header"><span class="task_block-name">%s</span></div>`+
+			`<div class="task_block-body">%d<sup class="task-price-star">*</sup></div>`+
+			`<div class="task_block-footer">`+
+			`<span class="task_block-tags">%s</span>`+
+			`<span class="task_block-solves">%s</span>`+
+			`</div></a>`,
+		name, task.Price, task.Tags, solvesRu)
+
+	return
+}
+
+func categoryToHTML(teamID int, category game.CategoryInfo, ru bool) (html string) {
+
+	html = fmt.Sprintf(
+		`<div class="category">`+
+			`<div class="category-header">`+
+			`<span class="category-bar"></span>`+
+			`<span class="category-name">%s</span>`+
+			`</div>`+
+			`<div class="category-tasks">`,
+		category.Name)
+
+	for _, task := range category.TasksInfo {
+		html += taskToHTML(teamID, task, ru)
+	}
+
+	html += `</div></div>`
+
+	return
+}

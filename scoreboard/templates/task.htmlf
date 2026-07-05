@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15171b">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <title>ЭТАЛОН CTF: Задание</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/scoreboard.js" defer></script>
+</head>
+<body>
+
+<header id="header">
+  <a class="brand" href="/tasks.html">
+    <img class="brand-owl" src="/images/etalon-owl.png" alt="Эталон">
+    <div class="brand-divider"></div>
+    <span class="brand-title">ЭТАЛОН CTF <em>2026</em></span>
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+  <label for="nav-toggle" class="nav-burger" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="main-nav">
+    <a class="nav-link active" href="/tasks.html">Задания</a>
+    <a class="nav-link" href="/index.html">Скорборд</a>
+    <a class="nav-link" href="/profile.html">Профиль</a>
+    <a class="nav-link" href="/support.html">Поддержка</a>
+  </nav>
+  <div id="info" class="header-info"></div>
+</header>
+
+<div id="content">
+  <div class="task-detail">
+    <div id="white_block">
+      <div id="task_header">
+        <div class="task-header-row">
+          <div class="task-header-name">%s</div>
+          <div class="task-header-price">
+            <div class="task-price-big">~%d<sup class="task-price-star">*</sup></div>
+            <div class="task-price-label">очков</div>
+          </div>
+        </div>
+      </div>
+      <div id="task_body">
+        <div>%s</div>
+        <div class="task-author">Автор: %s</div>
+      </div>
+      <div id="task_footer">%s</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

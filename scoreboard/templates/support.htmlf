@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15171b">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <title>ЭТАЛОН CTF: Поддержка</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/scoreboard.js" defer></script>
+  <script src="/js/support.js" defer></script>
+</head>
+<body>
+
+<header id="header">
+  <a class="brand" href="/tasks.html">
+    <img class="brand-owl" src="/images/etalon-owl.png" alt="Эталон">
+    <div class="brand-divider"></div>
+    <span class="brand-title">ЭТАЛОН CTF <em>2026</em></span>
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+  <label for="nav-toggle" class="nav-burger" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="main-nav">
+    <a class="nav-link" href="/tasks.html">Задания</a>
+    <a class="nav-link" href="/index.html">Скорборд</a>
+    <a class="nav-link" href="/profile.html">Профиль</a>
+    <a class="nav-link active" href="/support.html">Поддержка</a>
+  </nav>
+  <div id="info" class="header-info">%s</div>
+</header>
+
+<div id="content">
+  <div class="support-page">
+    <div class="support-head">
+      <h1 class="support-title">Поддержка</h1>
+      <div class="support-sub">Мы всегда готовы помочь. Обратитесь к нам, и мы ответим в ближайшее время.</div>
+    </div>
+    <div class="support-grid">
+      <div class="support-card support-form-card">
+%s
+      </div>
+      <aside class="support-side">
+        <div class="support-card">
+          <div class="support-card-header">
+            <span class="support-card-bar"></span>
+            <span class="support-card-title">О нас</span>
+          </div>
+          <div class="support-about-text">ЭТАЛОН CTF: командные соревнования по информационной безопасности для школьников и студентов.</div>
+          <div class="support-about-text">Проверяйте знания, решайте задачи и поднимайтесь в таблице лидеров.</div>
+          <a class="support-vk-card support-about-vk" href="https://vk.ru/repetitor_penza_etalon" target="_blank" rel="noopener">
+            <span class="support-vk-badge">VK</span>
+            <span class="support-vk-name">Мы ВКонтакте</span>
+            <svg class="support-ext-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+        <div class="support-card">
+          <div class="support-card-header">
+            <span class="support-card-bar"></span>
+            <span class="support-card-title">При поддержке</span>
+          </div>
+          <a class="support-uni" href="https://pnzgu.ru/" target="_blank" rel="noopener">
+            <img class="support-uni-logo" src="/images/pgu-logo.png" alt="ПГУ">
+            <div class="support-uni-text">Соревнование проводится при поддержке Пензенского государственного университета (ПГУ)</div>
+          </a>
+        </div>
+        <div class="support-card">
+          <div class="support-card-header">
+            <span class="support-card-bar"></span>
+            <span class="support-card-title">Как мы работаем</span>
+          </div>
+          <div class="support-how">
+            <div class="support-how-row">
+              <span class="support-how-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </span>
+              <span class="support-how-text">Мы стараемся отвечать в течение 8 часов</span>
+            </div>
+            <div class="support-how-row">
+              <span class="support-how-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </span>
+              <span class="support-how-text">Ответ придёт на почту, указанную в профиле</span>
+            </div>
+            <div class="support-how-row">
+              <span class="support-how-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </span>
+              <span class="support-how-text">Проверьте раздел «Спам», если не получили ответ</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

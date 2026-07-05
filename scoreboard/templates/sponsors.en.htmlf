@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15171b">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <title>ETALON CTF: Sponsors</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/scoreboard.js" defer></script>
+</head>
+<body>
+
+<header id="header">
+  <div class="brand">
+    <img class="brand-owl" src="/images/etalon-owl.png" alt="Etalon">
+    <div class="brand-divider"></div>
+    <span class="brand-title">ЭТАЛОН CTF <em>2026</em></span>
+  </div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+  <label for="nav-toggle" class="nav-burger" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="main-nav">
+    <a class="nav-link" href="/tasks.html">Задания</a>
+    <a class="nav-link" href="/index.html">Скорборд</a>
+    <a class="nav-link" href="/profile.html">Профиль</a>
+    <a class="nav-link" href="/support.html">Поддержка</a>
+  </nav>
+  <div id="info" class="header-info"></div>
+</header>
+
+<div id="content">
+  <div class="text-block">
+    <div class="text-block-header">Supported by</div>
+    <div class="sponsors-block">
+      <div class="sponsors-text">
+        The event is organised with the support of <span>PGU</span>, department of <span>IBST</span>.
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://vk.ru/repetitor_penza_etalon" target="_blank" rel="noopener" class="sponsor-link">
+          <span class="sponsor-link-icon">VK</span>
+          <div>
+            <div class="sponsor-link-label">Group</div>
+            <div class="sponsor-link-name">Etalon</div>
+          </div>
+        </a>
+        <a href="https://vk.ru/ibst_pgu" target="_blank" rel="noopener" class="sponsor-link">
+          <span class="sponsor-link-icon">VK</span>
+          <div>
+            <div class="sponsor-link-label">Group</div>
+            <div class="sponsor-link-name">PGU</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

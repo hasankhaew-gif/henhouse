@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111317">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <title>ЭТАЛОН CTF: %s</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-topbar">
+  <a class="admin-topbar-brand" href="/admin.html">
+    <img class="admin-topbar-owl" src="/images/etalon-owl.png" alt="">
+    <span class="admin-topbar-title">ЭТАЛОН CTF</span>
+    <span class="admin-topbar-sub">панель управления</span>
+  </a>
+  <div class="admin-topbar-right">
+    <div class="admin-topbar-info">%s</div>
+  </div>
+</header>
+
+<nav class="admin-tabs">
+  <a class="admin-tab" href="/admin.html?tab=overview">Обзор</a>
+  <a class="admin-tab" href="/admin.html?tab=game">Игра</a>
+  <a class="admin-tab" href="/admin.html?tab=tasks">Задания</a>
+  <a class="admin-tab" href="/admin.html?tab=teams">Команды</a>
+  <a class="admin-tab" href="/admin.html?tab=cats">Категории</a>
+  <a class="admin-tab" href="/admin.html?tab=news">Новости</a>
+  <a class="admin-tab" href="/admin.html?tab=support">Поддержка</a>
+  <a class="admin-tab" href="/admin.html?tab=events">События</a>
+  <a class="admin-tab admin-tab-site" href="/index.html">на сайт &rarr;</a>
+</nav>
+
+<div class="admin-content admin-content-narrow">
+%s
+</div>
+
+</body>
+</html>

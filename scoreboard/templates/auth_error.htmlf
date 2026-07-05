@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15171b">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <title>ЭТАЛОН CTF: 401</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-code">401</div>
+  <div class="error-msg">Доступ запрещён</div>
+  <div class="error-sub">Неверный токен или сессия устарела.</div>
+  <a class="error-link" href="/auth.html"><svg class="error-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>Войти снова</a>
+</div>
+
+</body>
+</html>
